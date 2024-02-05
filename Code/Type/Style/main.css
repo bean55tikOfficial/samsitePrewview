@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.main{
+  background: radial-gradient(circle, rgb(56, 56, 56), black);
+  background-position: center;
+  background-size: contain;
+  height: 120vh;
+}
+.navbar{
+  background-color: white;
+  height: 10vh;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+::-webkit-scrollbar {
+  width: 3vh;
+}
+::-webkit-scrollbar-track {
+  background: black;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #525252;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #252525;
+}
+.navbar .icon h1{
+  font-family: 'Oswald';
+  float: left;
+  padding-top: 1vh;
+  padding-left: 2vh;
+  background: linear-gradient(blue, rgb(255, 0, 255));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.navbar .icon img{
+  float: left;
+  padding-top: 1.5vh;
+  height: 5vh;
+}
+.navbar .menu{
+  margin-top: 2.5vh;
+  margin-right: 2.5vh;
+  text-align: center;
+}
+.navbar .menu .burger{
+  padding-top: 1vh;
+  display: block;
+  font-size: 5vh;
+  float: right;
+  border-style: solid;
+  border-radius: 100px;
+  height: 6vh;
+  width: 7vh;
+}
+.dropdown{
+  display: none;
+  border-color: rgb(54, 54, 54);
+  border-style: solid;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  position: absolute;
+  background: radial-gradient(circle, rgb(56, 56, 56), black);
+  width: 20vh;
+  right: 0;
+  height: 40vh;
+  z-index: 10;
+  animation: fade 0.3s ease-in-out forwards;
+  box-shadow: -5px 3px 10px white;
+}
+.dropdown li{
+  display: flex;
+}
+.dropdown li a{
+  font-size: 3vh;
+  cursor: pointer;
+  margin-top: 2vh;
+  margin-left: 1vh;
+  color: white;
+  text-decoration: none;
+}
+.show{
+  display: block;
+}
+@media (max-width: 800px) {
+  ::-webkit-scrollbar{
+    display: none;
+  }
+}
+@keyframes fade{
+  from{
+    opacity: 0;
+  }t0{
+    opacity: 1;
+  }
+}
